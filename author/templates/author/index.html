@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}Authors{% endblock %}
+
+{% block content %}
+    <a href="{% url 'author:add'%}">Add an Author</a>
+    <form action="{% url 'author:add' %}" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Add</button>
+    </form>
+    <h2>List of Authors!</h2>    
+    {% if authors %}
+        {% for author in authors %}
+            <p>{{ author.name }}</p>
+        {% endfor %}
+    {% else %}
+        <h3>No Authors yet...</h3>
+    {% endif %}
+{% endblock %}
