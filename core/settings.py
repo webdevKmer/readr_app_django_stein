@@ -20,9 +20,9 @@ SECRET_KEY = 'django-insecure-sg31_2g8_ny#a56&b$90pf==i()8fzb-t&sgk6224y$3rs6ao2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-webdevkmer-readrappdjan-81ipwsaqfsl.ws-eu108.gitpod.io']
+ALLOWED_HOSTS = ['8000-webdevkmer-readrappdjan-sj8eqwiyjmf.ws-eu110.gitpod.io']
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-webdevkmer-readrappdjan-81ipwsaqfsl.ws-eu108.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://8000-webdevkmer-readrappdjan-sj8eqwiyjmf.ws-eu110.gitpod.io']
 
 # Application definition
 
@@ -114,6 +114,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
+STATICFILES_DIRS = [
+    BASE_DIR / 'static',
+    ]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
