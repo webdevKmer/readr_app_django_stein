@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: seashell;
+    font-size: 18px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-links{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+nav a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+nav a:hover{
+    color:aliceblue;
+}
+.btn{
+    padding: .5rem 1rem;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    border-radius: .5rem;
+    border: 2px solid slateblue;
+}
+.btn:hover{
+    background-color: slateblue;
+    color: aliceblue;
+}
+#addAuthor{
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+header, main, footer{
+    padding: 1rem;
+}
