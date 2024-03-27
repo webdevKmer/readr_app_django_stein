@@ -5,7 +5,7 @@ from .models import Author
 # Create your views here.
 
 def index(request):
-    authors = Author.objects.all()
+    authors = Author.objects.order_by('-id')
     return render(request, 'author/index.html', {
         'authors': authors
     })
@@ -18,6 +18,6 @@ def add(request):
             return redirect('author:index')
     else :
         form = AuthorForm()
-    return render(request, 'author/index.html', {
+    return render(request, 'author/add.html', {
         'form': form
     })

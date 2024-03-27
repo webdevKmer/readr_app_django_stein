@@ -2,13 +2,8 @@
 
 {% block title %}Authors{% endblock %}
 
-{% block content %}
-    <a href="{% url 'author:add'%}">Add an Author</a>
-    <form action="{% url 'author:add' %}" method="POST">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Add</button>
-    </form>
+{% block content %}    
+    <a id='addAuthor' class='btn' href="{% url 'author:add'%}">Add an Author</a>
     <h2>List of Authors!</h2>    
     {% if authors %}
         {% for author in authors %}

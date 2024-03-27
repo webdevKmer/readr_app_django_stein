@@ -1,9 +1,12 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reader - {% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'styles.css'%}">
 </head>
 <body>
     <div class="container">
@@ -13,7 +16,7 @@
                 <div class="nav-links">
                     <a href="{% url 'author:index' %}">Authors</a>
                     <a href="{% url 'book:index' %}">Books</a>
-                    <a href="#">Add a Book</a>
+                    <a class='btn' href="#">Add a Book</a>
                 </div>
             </nav>
         </header>
@@ -23,7 +26,7 @@
             {% endblock %}
         </main>
         <footer>
-            <h5>This content was proudly made from &copy; Webdev Kmer - 2024</h5>
+            <h5>This content was proudly made by &copy; Webdev Kmer - 2024</h5>
         </footer>
     </div>
    
